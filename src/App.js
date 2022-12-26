@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Budget from './components/Budget';
+import Balance from './components/Balance';
+import Expenses from './components/Expenses';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='container'>
+        <div className='title'>
+          <h1>Budget Tracker</h1>
+        </div>
+        {/* -------- Need to put all of the components in a column -------- */}
+        <div className='columns'>
+          <div>
+            <Budget />
+          </div>
+          <div>
+            <Expenses />
+          </div>
+          <div>
+            <Balance />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
