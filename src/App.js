@@ -4,6 +4,7 @@ import Budget from './components/Budget';
 import Balance from './components/Balance';
 import Expenses from './components/Expenses';
 import ExpensesList from './components/ExpensesList';
+import NewExpenseForm from './components/NewExpenseForm';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <div className='title'>
           <h1>Budget Tracker</h1>
         </div>
-        {/* -------- Need to put all of the components in a column -------- */}
+        {/* -------- Put all of the components in a column -------- */}
         <div className='columns'>
           <div>
             <Budget />
@@ -29,6 +30,10 @@ function App() {
         </div>
         <div>
           <ExpensesList />
+        </div>
+        <h3>Add New Expense</h3>
+        <div>
+          <NewExpenseForm />
         </div>
       </div>
     </>
