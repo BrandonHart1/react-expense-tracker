@@ -9,7 +9,7 @@ const AppReducer = (state, action) => {
 
 // -------- State when the app loads --------
 const initialState = {
-  budget: 2000,
+  budget: 3000,
   total_expenses: [
     { id: 8, name: 'Groceries', cost: 100 },
     { id: 23, name: 'Gas', cost: 30 },
@@ -17,10 +17,12 @@ const initialState = {
   ],
 };
 
+// -------- Context (Components import and use to receive the state) --------
 export const AppContext = createContext();
 
-const AppProvider = (props) => {
-  const [state, dispatch] = useReducer(AddReducer, initialState);
+// -------- AppProvider will hold the state and pass to the components --------
+export const AppProvider = (props) => {
+  const [state, dispatch] = useReducer(AppReducer, initialState);
 
   return (
     <AppContext.Provider
