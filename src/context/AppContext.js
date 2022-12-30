@@ -1,6 +1,7 @@
 import { createContext, useReducer } from 'react';
 
 const AppReducer = (state, action) => {
+  // -------- Switch is used to determing how to change and update the state --------
   switch (action.type) {
     default:
       return state;
@@ -22,7 +23,7 @@ export const AppContext = createContext();
 
 // -------- AppProvider will hold the state and pass to the components --------
 export const AppProvider = (props) => {
-  const [state, dispatch] = useReducer(AppReducer, initialState);
+  const [state, dispatch] = useReducer(AppReducer, initialState); // --- Reducer will calculate and return the next state ---
 
   return (
     <AppContext.Provider
