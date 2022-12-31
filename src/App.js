@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Budget from './components/Budget';
 import Balance from './components/Balance';
-import Expenses from './components/Expenses';
+import ExpensesTotal from './components/ExpensesTotal';
 import ExpensesList from './components/ExpensesList';
 import NewExpenseForm from './components/NewExpenseForm';
 import { AppProvider } from './context/AppContext';
@@ -21,7 +21,7 @@ function App() {
               <Budget />
             </div>
             <div>
-              <Expenses />
+              <ExpensesTotal />
             </div>
             <div>
               <Balance />
