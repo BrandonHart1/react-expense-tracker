@@ -1,0 +1,15 @@
+.expense__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  background-color: #2922b3;
+  color: #fff;
+}
+
+.cost__delete {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}

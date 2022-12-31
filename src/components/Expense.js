@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { TiDelete } from 'react-icons/ti';
 import { AppContext } from '../context/AppContext';
+import './Expense.css';
 
 const Expense = (props) => {
   const { dispatch } = useContext(AppContext);
@@ -13,13 +14,17 @@ const Expense = (props) => {
   };
 
   return (
-    <li>
-      {props.name}
-      <div>
-        <span>${props.cost}</span>
-        <TiDelete onClick={deleteHandler}></TiDelete>
-      </div>
-    </li>
+    <div className='expense__item'>
+      <ul>
+        <div className='cost__delete'>
+          <li>
+            {props.name}
+            <span>${props.cost}</span>
+            <TiDelete onClick={deleteHandler}></TiDelete>
+          </li>
+        </div>
+      </ul>
+    </div>
   );
 };
 

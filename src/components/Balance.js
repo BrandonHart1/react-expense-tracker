@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+import './Balance.css';
 
 const Balance = () => {
   const { expenses, budget } = useContext(AppContext);
