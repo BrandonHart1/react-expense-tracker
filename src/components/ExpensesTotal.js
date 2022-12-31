@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+import './ExpensesTotal.css';
 
 const Expenses = () => {
   const { expenses } = useContext(AppContext);
@@ -9,8 +10,8 @@ const Expenses = () => {
   }, 0); // <-------- 0 = Starting value --------
 
   return (
-    <div>
-      <span>Total Expenses: {totalExpenses}</span>
+    <div className='total__expenses'>
+      <span>Total Expenses: ${totalExpenses}</span>
     </div>
   );
 };

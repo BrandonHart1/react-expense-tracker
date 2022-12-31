@@ -17,7 +17,7 @@ const Expense = (props) => {
       {props.name}
       <div>
         <span>${props.cost}</span>
-        <TiDelete size='1.5rem' onClick={deleteHandler}></TiDelete>
+        <TiDelete onClick={deleteHandler}></TiDelete>
       </div>
     </li>
   );
